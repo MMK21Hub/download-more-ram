@@ -1,10 +1,10 @@
-import { $ } from "voby";
-import banner from "/banner.svg";
-import styles from "./styles/App.module.css";
+import { $ } from "voby"
+import banner from "/banner.svg"
+import styles from "./styles/App.module.css"
 
 function App(): JSX.Element {
-  const count = $(0);
-  const increment = () => count((value) => value + 1);
+  const count = $(0)
+  const increment = () => count((value) => value + 1)
 
   return (
     <div class={styles.App}>
@@ -12,7 +12,7 @@ function App(): JSX.Element {
         <img src={banner} class={styles.logo} alt="logo" />
         <p>
           <button type="button" onClick={increment}>
-            count is: {count}
+            count: {count}
           </button>
         </p>
         <p>
@@ -28,7 +28,7 @@ function App(): JSX.Element {
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
