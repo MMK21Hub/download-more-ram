@@ -1,3 +1,14 @@
+:root {
+  --md-sys-color-primary: #008c4a;
+  --md-sys-color-on-primary-container: white;
+  --md-sys-color-primary-container: #008c4a;
+}
+
+html {
+  background-color: #121212;
+  color: white;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
@@ -5,6 +16,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-code {
-  font-family: monospace;
+.fixed-bottom-right {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 1em;
 }

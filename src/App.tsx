@@ -1,7 +1,10 @@
-import { $, html, useEffect, useMemo } from "voby"
+import { $, html, useEffect } from "voby"
 import banner from "/banner.svg"
 import "./styles/App.css"
 import "@material/web/button/filled-button.js"
+import "@material/web/button/outlined-button"
+import "@material/web/fab/fab.js"
+import "@material/web/icon/icon.js"
 import { globalStateTitle } from "."
 
 function App(): JSX.Element {
@@ -19,12 +22,19 @@ function App(): JSX.Element {
       <header class="header">
         <img src="${banner}" class="logo" alt="logo" />
         <p>
-          <button type="button" onClick="${increment}">count: ${count}</button>
+          <md-filled-button onClick="${increment}"
+            >Count: ${count}</md-filled-button
+          >
         </p>
         <p>Edit <code>src/App.tsx</code> and save to reload.</p>
-        <md-filled-button>Learn Voby</md-filled-button>
+        <md-outlined-button href="https://github.com/vobyjs/voby#readme"
+          >Learn Voby</md-outlined-button
+        >
       </header>
     </div>
+    <md-fab class="fixed-bottom-right" label="Download" variant="primary"
+      ><md-icon slot="icon">download</md-icon></md-fab
+    >
   `
 }
 
