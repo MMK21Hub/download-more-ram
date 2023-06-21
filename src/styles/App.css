@@ -9,3 +9,9 @@
 .header {
   font-size: calc(10px + 2vmin);
 }
+
+.header-img {
+  width: 100vw;
+  object-fit: cover;
+  max-height: 25vmin;
+}

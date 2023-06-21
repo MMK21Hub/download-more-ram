@@ -21,7 +21,7 @@ function App(): JSX.Element {
   return html`
     <div class="App">
       <header class="header">
-        <img src="${banner}" class="logo" alt="logo" />
+        <img class="header-img" src="/banner.webp" alt="Some RAM" />
         <p>
           <md-filled-button onClick="${increment}"
             >Count: ${count}</md-filled-button
