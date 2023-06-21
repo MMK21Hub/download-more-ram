@@ -1,11 +1,18 @@
-import { $, html } from "voby"
+import { $, html, useEffect, useMemo } from "voby"
 import banner from "/banner.svg"
 import "./styles/App.css"
 import "@material/web/button/filled-button.js"
+import { globalStateTitle } from "."
 
 function App(): JSX.Element {
   const count = $(0)
   const increment = () => count((value) => value + 1)
+
+  useEffect(() => {
+    if (count() > 0) {
+      globalStateTitle("Counting")
+    }
+  })
 
   return html`
     <div class="App">
