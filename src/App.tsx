@@ -1,6 +1,7 @@
 import { $, html, useEffect } from "voby"
 import banner from "/banner.svg"
 import "./styles/App.css"
+import "./styles/theme/theme.css"
 import "@material/web/button/filled-button.js"
 import "@material/web/button/outlined-button"
 import "@material/web/fab/fab.js"
