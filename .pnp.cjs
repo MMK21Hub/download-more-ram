@@ -28,6 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@material/web", "npm:1.0.0-pre.10"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"],\
             ["vite", "virtual:b0712a3c9ce3431cdf8558eab7e7e6b232347bdf541161b23d6832eca7821fb90e8799295f54307718330d597122476f9cebf31f59096ef334f526cb47115571#npm:2.9.16"],\
             ["voby", "npm:0.54.0"],\
@@ -69,6 +70,37 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@lit-labs/ssr-dom-shim", [\
+        ["npm:1.1.1", {\
+          "packageLocation": "./.yarn/cache/@lit-labs-ssr-dom-shim-npm-1.1.1-8b753a4141-7a7add78e3.zip/node_modules/@lit-labs/ssr-dom-shim/",\
+          "packageDependencies": [\
+            ["@lit-labs/ssr-dom-shim", "npm:1.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@lit/reactive-element", [\
+        ["npm:1.6.2", {\
+          "packageLocation": "./.yarn/cache/@lit-reactive-element-npm-1.6.2-1d20024e26-011a3ef093.zip/node_modules/@lit/reactive-element/",\
+          "packageDependencies": [\
+            ["@lit/reactive-element", "npm:1.6.2"],\
+            ["@lit-labs/ssr-dom-shim", "npm:1.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@material/web", [\
+        ["npm:1.0.0-pre.10", {\
+          "packageLocation": "./.yarn/cache/@material-web-npm-1.0.0-pre.10-31548f6c29-977ef98827.zip/node_modules/@material/web/",\
+          "packageDependencies": [\
+            ["@material/web", "npm:1.0.0-pre.10"],\
+            ["lit", "npm:2.7.5"],\
+            ["safevalues", "npm:0.4.3"],\
+            ["tslib", "npm:2.5.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@npmcli/fs", [\
         ["npm:3.1.0", {\
           "packageLocation": "./.yarn/cache/@npmcli-fs-npm-3.1.0-0844a57978-a50a6818de.zip/node_modules/@npmcli/fs/",\
@@ -93,6 +125,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@tootallnate-once-npm-2.0.0-e36cf4f140-ad87447820.zip/node_modules/@tootallnate/once/",\
           "packageDependencies": [\
             ["@tootallnate/once", "npm:2.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/trusted-types", [\
+        ["npm:2.0.3", {\
+          "packageLocation": "./.yarn/cache/@types-trusted-types-npm-2.0.3-225cf76fb4-4794804bc4.zip/node_modules/@types/trusted-types/",\
+          "packageDependencies": [\
+            ["@types/trusted-types", "npm:2.0.3"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -363,6 +404,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["download-more-ram", "workspace:."],\
+            ["@material/web", "npm:1.0.0-pre.10"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"],\
             ["vite", "virtual:b0712a3c9ce3431cdf8558eab7e7e6b232347bdf541161b23d6832eca7821fb90e8799295f54307718330d597122476f9cebf31f59096ef334f526cb47115571#npm:2.9.16"],\
             ["voby", "npm:0.54.0"],\
@@ -928,6 +970,40 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["lit", [\
+        ["npm:2.7.5", {\
+          "packageLocation": "./.yarn/cache/lit-npm-2.7.5-bef28da03f-61a3f87c57.zip/node_modules/lit/",\
+          "packageDependencies": [\
+            ["lit", "npm:2.7.5"],\
+            ["@lit/reactive-element", "npm:1.6.2"],\
+            ["lit-element", "npm:3.3.2"],\
+            ["lit-html", "npm:2.7.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lit-element", [\
+        ["npm:3.3.2", {\
+          "packageLocation": "./.yarn/cache/lit-element-npm-3.3.2-4cb4695bd1-afe50825be.zip/node_modules/lit-element/",\
+          "packageDependencies": [\
+            ["lit-element", "npm:3.3.2"],\
+            ["@lit-labs/ssr-dom-shim", "npm:1.1.1"],\
+            ["@lit/reactive-element", "npm:1.6.2"],\
+            ["lit-html", "npm:2.7.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["lit-html", [\
+        ["npm:2.7.4", {\
+          "packageLocation": "./.yarn/cache/lit-html-npm-2.7.4-e950aa5037-3809d62d8b.zip/node_modules/lit-html/",\
+          "packageDependencies": [\
+            ["lit-html", "npm:2.7.4"],\
+            ["@types/trusted-types", "npm:2.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["lru-cache", [\
         ["npm:6.0.0", {\
           "packageLocation": "./.yarn/cache/lru-cache-npm-6.0.0-b4c8668fe1-f97f499f89.zip/node_modules/lru-cache/",\
@@ -1338,6 +1414,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["safevalues", [\
+        ["npm:0.4.3", {\
+          "packageLocation": "./.yarn/cache/safevalues-npm-0.4.3-bbc80a7489-a5cbf33996.zip/node_modules/safevalues/",\
+          "packageDependencies": [\
+            ["safevalues", "npm:0.4.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["semver", [\
         ["npm:7.5.2", {\
           "packageLocation": "./.yarn/cache/semver-npm-7.5.2-28fb0fd2d6-3fdf5d1e6f.zip/node_modules/semver/",\
@@ -1513,6 +1598,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["minizlib", "npm:2.1.2"],\
             ["mkdirp", "npm:1.0.4"],\
             ["yallist", "npm:4.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["tslib", [\
+        ["npm:2.5.3", {\
+          "packageLocation": "./.yarn/cache/tslib-npm-2.5.3-7756051e02-88902b309a.zip/node_modules/tslib/",\
+          "packageDependencies": [\
+            ["tslib", "npm:2.5.3"]\
           ],\
           "linkType": "HARD"\
         }]\

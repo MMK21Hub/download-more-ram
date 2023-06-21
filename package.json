@@ -16,6 +16,7 @@
     "voby-vite": "^1.0.0"
   },
   "dependencies": {
+    "@material/web": "^1.0.0-pre.10",
     "voby": "*"
   },
   "private": true
