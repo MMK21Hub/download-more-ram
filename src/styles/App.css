@@ -1,17 +1,63 @@
-.App {
-  text-align: center;
+h1 {
+  margin: 0;
 }
 
-.logo {
-  height: 40vmin;
+.content {
+  transition: padding-inline 250ms ease-out;
+  margin-left: var(--page-margin);
+  margin-right: var(--page-margin);
 }
 
-.header {
-  font-size: calc(10px + 2vmin);
+@media screen and (width <= 600px) {
+  :root {
+    --page-margin: 16px;
+  }
 }
 
-.header-img {
-  width: 100vw;
-  object-fit: cover;
-  max-height: 25vmin;
+@media screen and (600px < width <= 840px) {
+  :root {
+    --page-margin: 24px;
+  }
+}
+
+@media screen and (840px < width) {
+  :root {
+    --page-margin: 24px;
+  }
+}
+
+/* Wrapper element */
+.bg-header-image-small {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("banner-small.webp");
+}
+
+/* Inner element */
+.bg-header-image {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("banner.webp");
+  height: fit-content;
+  min-height: var(--header-height);
+
+  padding-left: var(--page-margin);
+  padding-right: var(--page-margin);
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+
+.bg-header-image-small,
+.bg-header-image {
+  background-size: cover;
+}
+
+header h1 {
+  height: fit-content;
+  justify-self: flex-end;
+  margin-bottom: 28px;
+}
+
+header {
+  --header-height: 10em;
+  min-height: var(--header-height);
 }

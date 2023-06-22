@@ -19,19 +19,22 @@ function App(): JSX.Element {
   })
 
   return html`
-    <div class="App">
-      <header class="header">
-        <img class="header-img" src="/banner.webp" alt="Some RAM" />
-        <p>
-          <md-filled-button onClick="${increment}"
-            >Count: ${count}</md-filled-button
-          >
-        </p>
-        <p>Edit <code>src/App.tsx</code> and save to reload.</p>
-        <md-outlined-button href="https://github.com/vobyjs/voby#readme"
-          >Learn Voby</md-outlined-button
+    <header class="bg-header-image-small">
+      <div class="bg-header-image">
+        <h1>Download More RAM</h1>
+        <div class="buttons-row"></div>
+      </div>
+    </header>
+    <div class="content">
+      <p>
+        <md-filled-button onClick="${increment}"
+          >Count: ${count}</md-filled-button
         >
-      </header>
+      </p>
+      <p>Edit <code>src/App.tsx</code> and save to reload.</p>
+      <md-outlined-button href="https://github.com/vobyjs/voby#readme"
+        >Learn Voby</md-outlined-button
+      >
     </div>
     <md-fab class="fixed-bottom-right" label="Download" variant="primary"
       ><md-icon slot="icon">download</md-icon></md-fab

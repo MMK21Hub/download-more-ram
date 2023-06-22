@@ -1,6 +1,8 @@
 html {
-  background-color: #121212;
-  color: white;
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  transition: all 250ms ease-in-out;
+  transition-property: color, background-color;
 }
 
 body {
@@ -15,4 +17,9 @@ body {
   right: 0;
   bottom: 0;
   margin: 1em;
+}
+
+.buttons-row {
+  width: 100%;
+  display: flex;
 }
