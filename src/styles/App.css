@@ -3,9 +3,8 @@ h1 {
 }
 
 .content {
-  transition: padding-inline 250ms ease-out;
-  margin-left: var(--page-margin);
-  margin-right: var(--page-margin);
+  transition: margin-inline 250ms ease-out;
+  margin-inline: var(--page-margin);
 }
 
 @media screen and (width <= 600px) {
@@ -39,8 +38,6 @@ h1 {
   height: fit-content;
   min-height: var(--header-height);
 
-  padding-left: var(--page-margin);
-  padding-right: var(--page-margin);
   display: flex;
   flex-direction: column-reverse;
   justify-content: space-between;
@@ -49,15 +46,27 @@ h1 {
 .bg-header-image-small,
 .bg-header-image {
   background-size: cover;
+  background-position: 0% 10%;
 }
 
 header h1 {
   height: fit-content;
   justify-self: flex-end;
-  margin-bottom: 28px;
 }
 
-header {
-  --header-height: 10em;
+.bg-header-image {
+  --header-height: 152px;
   min-height: var(--header-height);
+  padding-bottom: 28px;
+  padding-inline: 16px;
+  padding-top: 20px;
+  transition: padding 500ms ease-out, min-height 500ms ease-out;
+}
+
+@media screen and (height < 30em) {
+  .bg-header-image {
+    padding: 0;
+    --header-height: 64px;
+    padding-inline: 16px;
+  }
 }
