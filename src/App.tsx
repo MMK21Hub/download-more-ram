@@ -34,10 +34,7 @@ function App(): JSX.Element {
       <h2>Specs at a glance</h2>
       <${Specs}></${Specs}>
       <h2>Configure your RAM</h2>
-
-      <md-outlined-button href="https://github.com/vobyjs/voby#readme"
-        >Learn Voby</md-outlined-button
-      >
+      <p>Coming soon!</p>
     </div>
     <md-fab class="fixed-bottom-right" label="Download" variant="primary"
       ><iconify-icon icon="mdi:download" slot="icon"></iconify-icon></md-fab
