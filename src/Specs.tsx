@@ -23,24 +23,24 @@ class Numeric {
 interface HostSpecOptions {
   shortName: string
   id: string
-  getIcon: (value: Numeric) => string
-  getValue: () => Numeric
+  getIcon: (value: Numeric | null) => string
+  getValue: () => Numeric | null | undefined
   isAvailable?: () => boolean
 }
 
 /** Represents a hardware attribute of the host device, e.g. processor clock speed or RAM capacity */
 class HostSpec {
   shortName
-  isAvailable?
-  getValue
+  isAvailable
+  getValue: () => Numeric | null | undefined
   getIcon
   id
 
   constructor(options: HostSpecOptions) {
     this.shortName = options.shortName
-    this.isAvailable = options.isAvailable
     this.getValue = options.getValue
-    this.getIcon = () => options.getIcon(this.getValue())
+    this.isAvailable = options.isAvailable || !!this.getValue()
+    this.getIcon = () => options.getIcon(this.getValue() || null)
     this.id = options.id
   }
 }
@@ -51,12 +51,22 @@ function Specs(): JSX.Element {
       shortName: "CPU cores",
       id: "cpu-cores",
       getIcon(value) {
+        if (!value) return "mdi:chip"
         const count = value.magnitude
         if (count <= 10) return `mdi:numeric-${count}-box-multiple-outline`
         return "mdi:numeric-9-plus-box-multiple"
       },
       getValue() {
         return new Numeric(navigator.hardwareConcurrency)
+      },
+    }),
+    new HostSpec({
+      shortName: "Ping",
+      id: "ping",
+      getIcon: () => "mdi:router-network",
+      getValue() {
+        const ping = navigator.connection?.rtt
+        return ping ? new Numeric(ping, "ms") : null
       },
     }),
   ])
@@ -67,7 +77,7 @@ function Specs(): JSX.Element {
       html`<div class="spec-card" id=${spec.id}>
         <h3>${spec.shortName}</h3>
         <iconify-icon icon=${spec.getIcon()}></iconify-icon>
-        <div class="value">${spec.getValue().toString()}</div>
+        <div class="value">${spec.getValue()?.toString() || "N/A"}</div>
       </div>`}
     </${For}>
   </div> `
