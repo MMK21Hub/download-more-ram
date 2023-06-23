@@ -71,7 +71,7 @@ function Specs(): JSX.Element {
     }),
     new HostSpec<string>({
       shortName: "Network speed category",
-      id: "ping",
+      id: "effective-type",
       getIcon() {
         const effectiveType = navigator.connection?.effectiveType
         if (effectiveType === "slow-2g") return "mdi:signal-cellular-outline"
@@ -87,6 +87,39 @@ function Specs(): JSX.Element {
         if (effectiveType === "2g") return "Like 2G"
         if (effectiveType === "3g") return "Like 3G"
         if (effectiveType === "4g") return "4G or faster"
+        return effectiveType
+      },
+    }),
+    new HostSpec<string>({
+      shortName: "Connection",
+      id: "connection-type",
+      getIcon() {
+        const effectiveType = navigator.connection?.type
+        if (effectiveType === "wimax") return "mdi:waveform"
+        if (effectiveType === "wifi") return "mdi:wifi"
+        if (effectiveType === "bluetooth") return "mdi:bluetooth"
+        if (effectiveType === "cellular") return "mdi:signal"
+        if (effectiveType === "ethernet") return "mdi:ethernet"
+        if (effectiveType === "none" && !navigator.onLine)
+          return "mdi:lan-disconnect"
+        return "mdi:lan-connect"
+      },
+      getValue() {
+        const effectiveType = navigator.connection?.type
+        if (!effectiveType || effectiveType === "unknown") return null
+        if (effectiveType === "none" && navigator.onLine) {
+          // Browser hasn't properly implemented the effectiveType
+          // Firefox acts like this as of June 2023
+          return null
+        }
+        if (effectiveType === "wimax") return "Microwave broadband"
+        if (effectiveType === "wifi") return "Wi-Fi"
+        if (effectiveType === "bluetooth") return "Bluetooth"
+        if (effectiveType === "cellular") return "Mobile data"
+        if (effectiveType === "ethernet") return "Ethernet"
+        if (effectiveType === "mixed") return "Multiple"
+        if (effectiveType === "none") return "Offline"
+        if (effectiveType === "other") return "Other"
         return effectiveType
       },
     }),
