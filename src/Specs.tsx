@@ -22,7 +22,7 @@ class Numeric {
 interface HostSpecOptions {
   shortName: string
   id: string
-  icon: string
+  getIcon: (value: Numeric) => string
   getValue: () => Numeric
   isAvailable?: () => boolean
 }
@@ -32,14 +32,14 @@ class HostSpec {
   shortName
   isAvailable?
   getValue
-  icon
+  getIcon
   id
 
   constructor(options: HostSpecOptions) {
     this.shortName = options.shortName
     this.isAvailable = options.isAvailable
     this.getValue = options.getValue
-    this.icon = options.icon
+    this.getIcon = () => options.getIcon(this.getValue())
     this.id = options.id
   }
 }
@@ -49,7 +49,11 @@ function Specs(): JSX.Element {
     new HostSpec({
       shortName: "CPU cores",
       id: "cpu-cores",
-      icon: "splitscreen",
+      getIcon(value) {
+        const count = value.magnitude
+        if (count < 10) return `filter_${count}`
+        return "filter_9_plus"
+      },
       getValue() {
         return new Numeric(navigator.hardwareConcurrency)
       },
@@ -61,7 +65,7 @@ function Specs(): JSX.Element {
     ${(spec: HostSpec) =>
       html`<div class="spec-card" id=${spec.id}>
         <h3>${spec.shortName}</h3>
-        <md-icon>${spec.icon}</md-icon>
+        <md-icon>${spec.getIcon()}</md-icon>
         <div class="value">${spec.getValue().toString()}</div>
       </div>`}
     </${For}>
