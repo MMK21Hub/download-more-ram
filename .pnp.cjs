@@ -29,6 +29,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@material/web", "npm:1.0.0-pre.10"],\
+            ["prettier", "npm:2.8.8"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"],\
             ["vite", "virtual:b0712a3c9ce3431cdf8558eab7e7e6b232347bdf541161b23d6832eca7821fb90e8799295f54307718330d597122476f9cebf31f59096ef334f526cb47115571#npm:2.9.16"],\
             ["voby", "npm:0.54.0"],\
@@ -405,6 +406,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["download-more-ram", "workspace:."],\
             ["@material/web", "npm:1.0.0-pre.10"],\
+            ["prettier", "npm:2.8.8"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"],\
             ["vite", "virtual:b0712a3c9ce3431cdf8558eab7e7e6b232347bdf541161b23d6832eca7821fb90e8799295f54307718330d597122476f9cebf31f59096ef334f526cb47115571#npm:2.9.16"],\
             ["voby", "npm:0.54.0"],\
@@ -1328,6 +1330,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["nanoid", "npm:3.3.6"],\
             ["picocolors", "npm:1.0.0"],\
             ["source-map-js", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["prettier", [\
+        ["npm:2.8.8", {\
+          "packageLocation": "./.yarn/cache/prettier-npm-2.8.8-430828a36c-b49e409431.zip/node_modules/prettier/",\
+          "packageDependencies": [\
+            ["prettier", "npm:2.8.8"]\
           ],\
           "linkType": "HARD"\
         }]\
