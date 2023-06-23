@@ -18,7 +18,8 @@
   margin-bottom: 0.4em;
 }
 
-.spec-card md-icon {
+.spec-card md-icon,
+.spec-card iconify-icon {
   font-size: 2em;
   margin-bottom: 0.2em;
 }

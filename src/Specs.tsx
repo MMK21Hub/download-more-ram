@@ -1,4 +1,5 @@
 import { For, html, $, Observable } from "voby"
+import { Icon } from "./Icon"
 import "./styles/Specs.css"
 
 class Numeric {
@@ -51,8 +52,8 @@ function Specs(): JSX.Element {
       id: "cpu-cores",
       getIcon(value) {
         const count = value.magnitude
-        if (count < 10) return `filter_${count}`
-        return "filter_9_plus"
+        if (count <= 10) return `mdi:numeric-${count}-box-multiple-outline`
+        return "mdi:numeric-9-plus-box-multiple"
       },
       getValue() {
         return new Numeric(navigator.hardwareConcurrency)
@@ -65,7 +66,7 @@ function Specs(): JSX.Element {
     ${(spec: HostSpec) =>
       html`<div class="spec-card" id=${spec.id}>
         <h3>${spec.shortName}</h3>
-        <md-icon>${spec.getIcon()}</md-icon>
+        <iconify-icon icon=${spec.getIcon()}></iconify-icon>
         <div class="value">${spec.getValue().toString()}</div>
       </div>`}
     </${For}>

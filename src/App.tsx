@@ -40,7 +40,7 @@ function App(): JSX.Element {
       >
     </div>
     <md-fab class="fixed-bottom-right" label="Download" variant="primary"
-      ><md-icon slot="icon">download</md-icon></md-fab
+      ><iconify-icon icon="mdi:download" slot="icon"></iconify-icon></md-fab
     >
   `
 }
