@@ -37,7 +37,7 @@ function App(): JSX.Element {
       <p>Coming soon!</p>
     </div>
     <md-fab class="fixed-bottom-right" label="Download" variant="primary"
-      ><iconify-icon icon="mdi:download" slot="icon"></iconify-icon></md-fab
+      ><iconify-icon icon="material-symbols:download" slot="icon"></iconify-icon></md-fab
     >
   `
 }

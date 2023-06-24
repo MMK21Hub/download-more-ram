@@ -91,7 +91,7 @@ function Specs(): JSX.Element {
       },
     }),
     new HostSpec<string>({
-      shortName: "Connection",
+      shortName: "Connection type",
       id: "connection-type",
       getIcon() {
         const effectiveType = navigator.connection?.type
@@ -121,6 +121,17 @@ function Specs(): JSX.Element {
         if (effectiveType === "none") return "Offline"
         if (effectiveType === "other") return "Other"
         return effectiveType
+      },
+    }),
+    new HostSpec<Numeric>({
+      shortName: "Download speed",
+      id: "download-speed",
+      getIcon() {
+        return "mdi:download-network-outline"
+      },
+      getValue() {
+        const downlinkSpeed = navigator.connection?.downlink
+        return downlinkSpeed ? new Numeric(downlinkSpeed, "MB/s") : null
       },
     }),
   ])
