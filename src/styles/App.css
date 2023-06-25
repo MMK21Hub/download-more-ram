@@ -27,8 +27,7 @@ h1 {
 
 /* Wrapper element */
 .bg-header-image-small {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("../banner-small.webp");
+  background: url("../banner-small.webp");
 }
 
 /* Inner element */

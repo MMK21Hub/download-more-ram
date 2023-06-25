@@ -139,11 +139,13 @@ function Specs(): JSX.Element {
   return html` <div class="specs-row">
     <${For} values=${specs}>
     ${(spec: HostSpec) =>
-      html`<div class="spec-card" id=${spec.id}>
-        <h3>${spec.shortName}</h3>
-        <iconify-icon icon=${spec.getIcon()}></iconify-icon>
-        <div class="value">${spec.getValue()?.toString() || "N/A"}</div>
-      </div>`}
+      html`
+        <div class="spec-card" id=${spec.id}>
+          <h3>${spec.shortName}</h3>
+          <iconify-icon icon=${spec.getIcon()}></iconify-icon>
+          <div class="value">${spec.getValue()?.toString() || "N/A"}</div>
+        </div>
+      `}
     </${For}>
   </div> `
 }

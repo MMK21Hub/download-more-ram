@@ -35,6 +35,8 @@ function App(): JSX.Element {
       <${Specs}></${Specs}>
       <h2>Configure your RAM</h2>
       <p>Coming soon!</p>
+      <h2>Settings</h2>
+      <p>Coming soon!</p>
     </div>
     <md-fab class="fixed-bottom-right" label="Download" variant="primary"
       ><iconify-icon icon="material-symbols:download" slot="icon"></iconify-icon></md-fab

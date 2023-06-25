@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@material/web": "^1.0.0-pre.10",
+    "@sentry/browser": "^7.56.0",
     "voby": "*"
   },
   "private": true

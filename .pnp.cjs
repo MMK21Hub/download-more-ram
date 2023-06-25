@@ -29,6 +29,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["@material/web", "npm:1.0.0-pre.10"],\
+            ["@sentry/browser", "npm:7.56.0"],\
             ["prettier", "npm:2.8.8"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"],\
             ["vite", "virtual:b0712a3c9ce3431cdf8558eab7e7e6b232347bdf541161b23d6832eca7821fb90e8799295f54307718330d597122476f9cebf31f59096ef334f526cb47115571#npm:2.9.16"],\
@@ -117,6 +118,78 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@pkgjs-parseargs-npm-0.11.0-cd2a3fe948-6ad6a00fc4.zip/node_modules/@pkgjs/parseargs/",\
           "packageDependencies": [\
             ["@pkgjs/parseargs", "npm:0.11.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@sentry-internal/tracing", [\
+        ["npm:7.56.0", {\
+          "packageLocation": "./.yarn/cache/@sentry-internal-tracing-npm-7.56.0-8cbbbbe341-34c90624c0.zip/node_modules/@sentry-internal/tracing/",\
+          "packageDependencies": [\
+            ["@sentry-internal/tracing", "npm:7.56.0"],\
+            ["@sentry/core", "npm:7.56.0"],\
+            ["@sentry/types", "npm:7.56.0"],\
+            ["@sentry/utils", "npm:7.56.0"],\
+            ["tslib", "npm:1.14.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@sentry/browser", [\
+        ["npm:7.56.0", {\
+          "packageLocation": "./.yarn/cache/@sentry-browser-npm-7.56.0-dd3ae6474d-5a3dd57965.zip/node_modules/@sentry/browser/",\
+          "packageDependencies": [\
+            ["@sentry/browser", "npm:7.56.0"],\
+            ["@sentry-internal/tracing", "npm:7.56.0"],\
+            ["@sentry/core", "npm:7.56.0"],\
+            ["@sentry/replay", "npm:7.56.0"],\
+            ["@sentry/types", "npm:7.56.0"],\
+            ["@sentry/utils", "npm:7.56.0"],\
+            ["tslib", "npm:1.14.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@sentry/core", [\
+        ["npm:7.56.0", {\
+          "packageLocation": "./.yarn/cache/@sentry-core-npm-7.56.0-495886764e-8ed39aa048.zip/node_modules/@sentry/core/",\
+          "packageDependencies": [\
+            ["@sentry/core", "npm:7.56.0"],\
+            ["@sentry/types", "npm:7.56.0"],\
+            ["@sentry/utils", "npm:7.56.0"],\
+            ["tslib", "npm:1.14.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@sentry/replay", [\
+        ["npm:7.56.0", {\
+          "packageLocation": "./.yarn/cache/@sentry-replay-npm-7.56.0-f7864e63a9-35c513c1f8.zip/node_modules/@sentry/replay/",\
+          "packageDependencies": [\
+            ["@sentry/replay", "npm:7.56.0"],\
+            ["@sentry/core", "npm:7.56.0"],\
+            ["@sentry/types", "npm:7.56.0"],\
+            ["@sentry/utils", "npm:7.56.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@sentry/types", [\
+        ["npm:7.56.0", {\
+          "packageLocation": "./.yarn/cache/@sentry-types-npm-7.56.0-9605d16923-404255165d.zip/node_modules/@sentry/types/",\
+          "packageDependencies": [\
+            ["@sentry/types", "npm:7.56.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@sentry/utils", [\
+        ["npm:7.56.0", {\
+          "packageLocation": "./.yarn/cache/@sentry-utils-npm-7.56.0-1792005bf6-00745e6568.zip/node_modules/@sentry/utils/",\
+          "packageDependencies": [\
+            ["@sentry/utils", "npm:7.56.0"],\
+            ["@sentry/types", "npm:7.56.0"],\
+            ["tslib", "npm:1.14.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -406,6 +479,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["download-more-ram", "workspace:."],\
             ["@material/web", "npm:1.0.0-pre.10"],\
+            ["@sentry/browser", "npm:7.56.0"],\
             ["prettier", "npm:2.8.8"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"],\
             ["vite", "virtual:b0712a3c9ce3431cdf8558eab7e7e6b232347bdf541161b23d6832eca7821fb90e8799295f54307718330d597122476f9cebf31f59096ef334f526cb47115571#npm:2.9.16"],\
@@ -1614,6 +1688,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["tslib", [\
+        ["npm:1.14.1", {\
+          "packageLocation": "./.yarn/cache/tslib-npm-1.14.1-102499115e-dbe628ef87.zip/node_modules/tslib/",\
+          "packageDependencies": [\
+            ["tslib", "npm:1.14.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["npm:2.5.3", {\
           "packageLocation": "./.yarn/cache/tslib-npm-2.5.3-7756051e02-88902b309a.zip/node_modules/tslib/",\
           "packageDependencies": [\
